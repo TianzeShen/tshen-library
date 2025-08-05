@@ -54,13 +54,13 @@
       <p>
         Company:
         <!-- Activity 9a: Get the company name from the bookstores object. -->
-        <!-- TODO: CODE TO GET COMPANY NAME HERE -->
+        {{ bookstores.company }}
       </p>
 
       <p>
         Total Stores:
         <!-- Activity 9b: Get the total number of stores from the bookstores object. -->
-        <!-- TODO: CODE TO GET TOTAL STORES HERE -->
+        {{ bookstores.totalStores }}
       </p>
 
       <h3>Iterating Object Properties</h3>
