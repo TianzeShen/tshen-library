@@ -40,7 +40,7 @@
       <p>{{ austen?.name }}'s works:</p>
       <!-- Activity 9: Render a list of Austen's works. Hint: Use the v-for directive to iterate through the array of authors that you have filtered out. -->
       <ul>
-        <li v-for="work in Austen.famousWorks" :key="work.title">
+        <li v-for="work in austen.famousWorks" :key="work.title">
           {{ work.title }}
         </li>
       </ul>
@@ -102,8 +102,8 @@
 import { ref, computed } from "vue"
 
 // Activity 1: Import JSON files (authors.json and bookstores.json)
-import authors from "../assets/authors.json"
-import bookstores from "../assets/bookstores.json"
+import authors from "../assets/json/authors.json"
+import bookstores from "../assets/json/bookstores.json"
 
 const showMessage = ref(false)
 
