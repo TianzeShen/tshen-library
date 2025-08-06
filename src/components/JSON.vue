@@ -113,6 +113,12 @@
     <section class="lab-section">
       <h2>Attribute, Class and Style Binding with <code>v-bind</code></h2>
       <p>Highlighting Specific Authors:</p>
+      <ul>
+        <li v-for="author in authors" :key="author.id"
+            :class="{ highlight: author.birthYear > 1850 }">
+          {{ author.name }} ({{ author.birthYear }})
+        </li>
+      </ul>
 
     </section>
   </div>
