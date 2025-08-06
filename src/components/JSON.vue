@@ -75,9 +75,11 @@
       <h3>Nested Objects</h3>
       <p>Opening Hours:</p>
       <!-- Activity 11: Iterate through the openingHours object and display the day of the week and the opening and closing times. -->
-      <!-- <ul>
-        <li v-for="day in openingHours" :key="day."
-      </ul> -->
+      <ul>
+        <li v-for="(hours, day) in bookstores.openingHours" :key="day">
+          {{ day }}: {{ hours }}
+        </li>
+      </ul>
 
       <h3>Working with Arrays in Objects</h3>
       <!-- Activity 12: Get the top sellers from the bookstores object. -->
