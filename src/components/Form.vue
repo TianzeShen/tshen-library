@@ -58,8 +58,15 @@
                         <button type="submit" class="btn btn-primary me-2">Submit</button>
                         <button type="button" class="btn btn-secondary" @click="clearForm">Clear</button>  
                     </div>
-                    <div class="row mt-5" v-if="submittedCards.length">
-                        <div class="d-flex flex-wrap justify-content-start">
+                     <div class="row mt-5" v-if="submittedCards.length">
+                        <DataTable :value="submittedCards">
+                        <Column field="username" header="Username" />
+                        <Column field="password" header="Password" />
+                        <Column field="isAustralian" header="Australian Resident" />
+                        <Column field="gender" header="Gender" />
+                        <Column field="reason" header="Reason" />
+                        </DataTable>
+                    <!--    <div class="d-flex flex-wrap justify-content-start">
                             <div v-for="(card, index) in submittedCards" :key="index" class="card m-2" style="width: 18rem;">
                                 <div class="card-header">
                                     User Information
@@ -72,41 +79,20 @@
                                     <li class="list-group-item">Reason: {{ card.reason }}</li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>                    
+                        </div>-->
+                    </div>                     
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- <div class="form">
-    <h1>User Information Form / Credentials</h1>
-        <form>
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username"><br>
-
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password"><br>
-
-            <label for="isAustralian">Australian Resident?</label><br>
-            <input type="checkbox" id="isAustralian" name="isAustralian"><br>
-            
-            <label for="reason">Reason For Joining:</label><br>
-            <textarea id ="reason" name="reason" rows="3"></textarea><br>
-
-            <label for="gender">Gender</label><br>
-            <select id="gender">
-                <option value="female">Female</option>
-                <option value="male">Male</option>
-                <option value="other">Other</option>
-            </select>
-        </form>
-    </div> -->
 </template>
 
 <script setup>
 // Our logic will go here
+import { DataTable } from 'primevue';
 import { ref } from 'vue';
+import Column from 'primevue/column';
   
 const formData = ref({
     username: '',
