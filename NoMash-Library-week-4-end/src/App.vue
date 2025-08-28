@@ -1,19 +1,22 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import JSON from './components/JSON.vue'
-import Form from './components/Form.vue'
+import JSONLab from './components/JSONLab.vue'
+import BHeader from './components/BHeader.vue'
+import LibraryRegistrationForm from './components/LibraryRegistrationForm.vue'
 </script>
 
 <template>
-  <!-- <main>
-    <JSON/>
-  </main> -->
-  <Form />
+  <header>
+    <BHeader />
+  </header>
+
+  <main>
+    <LibraryRegistrationForm />
+    <!-- <JSONLab /> -->
+  </main>
 </template>
 
 <style scoped>
-header {
+/* header {
   line-height: 1.5;
 }
 
@@ -38,5 +41,5 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
-}
+} */
 </style>
