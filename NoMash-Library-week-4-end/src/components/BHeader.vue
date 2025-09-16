@@ -9,7 +9,15 @@
             Home (Week 5)</router-link>
           <!-- <a href="#" class="nav-link active" aria-current="page">Home (Week 4)</a> -->
         </li>
-        <li class="nav-item"><router-link to="/about" class="nav-link">About</router-link></li>
+        <li class="nav-item">
+          <router-link to="/about" class="nav-link" active-class="active">About</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/FireLogin" class="nav-link" active-class="active">Firebase Login</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/FireRegister" class="nav-link" active-class="active">Firebase Sign up</router-link>
+        </li>
         <!-- <li class="nav-item"><a href="#" class="nav-link">About</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Contact us</a></li> -->
       </ul>
