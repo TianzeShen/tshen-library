@@ -21,6 +21,9 @@
         <li class="nav-item">
           <router-link to="/AddBook" class="nav-link" active-class="active">Add Book</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/BookList" class="nav-link" active-class="active">Book List</router-link>
+        </li>
         <!-- <li class="nav-item"><a href="#" class="nav-link">About</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Contact us</a></li> -->
       </ul>
