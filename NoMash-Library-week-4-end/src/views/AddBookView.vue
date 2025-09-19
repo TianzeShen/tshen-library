@@ -6,7 +6,7 @@
           <form @submit.prevent="addBook">
             <div class="text-center">
               <label for="isbn">ISBN:</label>
-              <input type="text" v-model="isbn" id="isgn" required />
+              <input type="text" v-model="isbn" id="isbn" required />
             </div>
             <div class="text-center mt-2">
               <label for="name">Name:</label>
