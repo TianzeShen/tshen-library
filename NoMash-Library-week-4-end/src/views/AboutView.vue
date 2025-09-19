@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-  </template>
+</template>
   
   <script setup>
   // No script needed for now

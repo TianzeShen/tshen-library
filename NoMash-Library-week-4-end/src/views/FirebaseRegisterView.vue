@@ -25,7 +25,7 @@ const register = () => {
     createUserWithEmailAndPassword(auth, email.value, password.value)
     .then((data) => {
         console.log("Firebase Rigister Successful!")
-        router.push('/login')
+        router.push('/FireLogin')
     }).catch((error) => {
         console.log(error.code)
     })
