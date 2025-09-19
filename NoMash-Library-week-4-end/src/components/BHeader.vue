@@ -1,3 +1,20 @@
+<script setup>
+import { getAuth, signOut } from 'firebase/auth'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const logout = async () => {
+  const auth = getAuth()
+  try {
+    await signOut(auth)
+    alert('You have been logged out')
+    router.push('/FireLogin') 
+  } catch (e) {
+    console.error(e)
+  }
+}
+</script>
+
 <template>
   <!-- Using Bootstrap's Header template (starter code) -->
   <!-- https://getbootstrap.com/docs/5.0/examples/headers/ -->
@@ -23,6 +40,9 @@
         </li>
         <li class="nav-item">
           <router-link to="/BookList" class="nav-link" active-class="active">Book List</router-link>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger" @click="logout">Log out</button>
         </li>
         <!-- <li class="nav-item"><a href="#" class="nav-link">About</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Contact us</a></li> -->
