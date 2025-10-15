@@ -19,3 +19,9 @@ initializeApp(firebaseConfig);
 
 const db = getFirestore()
 export default db
+
+// function fetchData() {
+//   let data = fetch('https://api.example.com/data');
+//   return data.json(); 
+// }
+// fetchData().then(data => console.log(data));
