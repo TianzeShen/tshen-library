@@ -48,7 +48,7 @@
         computed: {
             temperature() {
                 return this.weatherData
-                    ? Math.floor(this.weatherData.main.temp - 273)
+                    ? Math.floor(this.weatherData.main.temp - 273.15)
                     : null;
             },
             iconUrl() {
@@ -61,6 +61,14 @@
             this.fetchCurrentLocationWeather();
         },
         methods: {
+            searchByCity() {
+                const city = this.city.trim();
+                if (this.city) {
+                    this.fetchWeatherByCity(city);
+                } else {
+                    this.fetchCurrentLocationWeather();
+                }
+            },
             async fetchCurrentLocationWeather() {
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(async (position) => {
@@ -69,6 +77,10 @@
                         await this.fetchWeatherData(url);
                     });
                 }
+            },
+            async fetchWeatherByCity(city) {
+                const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
+                await this.fetchWeatherData(url);
             },
             async fetchWeatherData(url) {
                 try {
