@@ -27,8 +27,7 @@ export default{
     methods: {
         async getBookCountAPI() {
             try {
-                // paste API endpoint inside the quotes
-                const response = await axios.get('')
+                const response = await axios.get('https://countbooks-euec7mibcq-uc.a.run.app')
                 this.jsondata = response.data
                 this.error = null
             } catch (error) {
