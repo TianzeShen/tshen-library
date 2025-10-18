@@ -27,8 +27,8 @@ export default{
         async getBookCount() {
             try {
                 // paste API endpoint inside the quotes
-                const response = await axios.get('')
-                this.bookCount = response.data.count
+                const response = await axios.get('https://countbooks-euec7mibcq-uc.a.run.app')
+                this.bookCount = response.data.bookCount
                 this.error = null
             } catch (error) {
                 console.error('Error fetching book count:', error)
