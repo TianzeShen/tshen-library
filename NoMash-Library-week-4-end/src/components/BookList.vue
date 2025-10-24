@@ -24,7 +24,7 @@ export default {
                     collection(db, 'books'), 
                     where('isbn', '<', 9999),
                     orderBy('isbn', 'desc'),
-                    limit(2)
+                    limit(5)
                 )
                 const querySnapshot = await getDocs(q)
                 const booksArray = []

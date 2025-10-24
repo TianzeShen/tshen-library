@@ -53,7 +53,7 @@
             },
             iconUrl() {
                 return this.weatherData
-                ? `http://api.openweathermap.org/img/w/${this.weatherData.weather[0].icon}.png`
+                ? `https://api.openweathermap.org/img/w/${this.weatherData.weather[0].icon}.png`
                 : null;
             },
         },
@@ -73,13 +73,13 @@
                 if (navigator.geolocation) {
                     navigator.geolocation.getCurrentPosition(async (position) => {
                         const { latitude, longitude } = position.coords;
-                        const url = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apikey}`
+                        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apikey}`
                         await this.fetchWeatherData(url);
                     });
                 }
             },
             async fetchWeatherByCity(city) {
-                const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
+                const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
                 await this.fetchWeatherData(url);
             },
             async fetchWeatherData(url) {
