@@ -13,6 +13,9 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Change directory
+      run: cd NoMash-Library-week-4-end
+
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
